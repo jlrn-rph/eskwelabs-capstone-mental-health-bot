@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_general
+  - mood_great
+  - mood_unhappy
+  - mood_high_risk
+  - user_needs_support
+  - ask_facility
+  - inform_location
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! I'm Beshy, your Bot for Emotional Support and a Happy You 🤗 \n\n
+  I'm here to provide support and guidance during your mental health journey. It's important to note that I'm not a medical professional, but I'm here to lend an empathetic ear and offer resources to help you.\n\n
+  Your privacy is important to us. We strictly adhere to data privacy and ethics to ensure a safe and confidential environment.\n\n
+  How have you been feeling lately? Is there something specific you'd like help with?"
+
+  utter_ask_more_details:
+    - text: "Could you share more details?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_anything_else:
+  - text: "Is there anything else I can do for you?"
+
+  utter_more_help:
+  - text: "How can I help you?"
+
+  utter_goodbye:
+  - text: "I'm glad I could be of help. If you have any more concerns in the future, don't hesitate to ask. Remember to prioritize your well-being. Take care and stay well!"
+  
+  utter_cheer_up:
+  - text: "I'm sorry to hear that you're feeling down. Remember, tough times don't last, but tough people do. Here is something to cheer you up."
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_emotional_support_general_mood:
+    - text: "I'm here to listen and support you. Remember, it's okay to not be okay sometimes. Take care of yourself and reach out to loved ones if you need someone to talk to. Here are some resources that could explore to improve your mental wellbeing:\n\n
+          📖 [A Seed Called Courage](https://bit.ly/dohmhphselfcarekit-1): We hope that through this workbook, ay maramdaman niyo na you are not alone. Andito kami para damayan ka as you walk through life. This is a self-care workbook by MentalHealthPH. You may visit their [website](https://mentalhealthph.org/) for more mental health resources. You can use this any time, in any way you want.\n\n
+          📖 [Caring for Your Mental Health](https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health): Even small acts of self-care in your daily life can have a big impact on maintaining your mental health and help support your treatment if you have a mental illness. \n\n
+          📖 [How to be happier](https://www.nhs.uk/mental-health/self-help/tips-and-support/how-to-be-happier/): Try our 6 tips to help you be happier, more in control, and able to cope better with life's ups and downs.\n\n
+          📖 [Mindfulness](https://www.nhs.uk/mental-health/self-help/tips-and-support/mindfulness/): Mindfulness can help mental well-being. Learn how it does so and how you can get started to be more mindful.\n\n"
+
+  utter_high_risk_contact:
+    - text: "I'm really sorry to hear that you're feeling this way. It's important to talk to someone who can help. Please reach out to a helpline right away. Here's a helpline number you can contact:\n 📱 0917-899-8727 \n📞 (02) 1553 \n📞 (02) 7-989-8727 \nRemember that you're not alone, and there are people who care about you."
+
+  utter_similar_thoughts_status:
+    - text: "Do you want to know how similar your thoughts are to others?"
+
+  utter_location_details:
+    - text: "I'm happy to provide you the information you need. But first, may I ask what is your location?"
+
+  utter_high_risk_resources:
+    - text: "In the meantime, I can provide you with some self-help resources that might be useful to you. Take a look at the following resources:\n\n
+            📖 [Do you feel like life is not worth living?](https://cdn.who.int/media/docs/default-source/campaigns-and-initiatives/world-mental-health-day/2021/3_suicidal_thoughts_2021.pdf?sfvrsn=f0975d2a_17): If you have experienced thoughts of suicide or self-harm, read this for what you need to know and what you can do. Remember, you are not alone. Help is available and you can get better.\n\n
+            📖 [Do you know someone who may be considering suicide?](https://cdn.who.int/media/docs/default-source/campaigns-and-initiatives/world-mental-health-day/2021/4_suicide_for_friend_family_members_2021.pdf?sfvrsn=ec5c0d68_17): Know about warning signs, people at risk of taking their own life, and what you can do to help them.
+            Remember to take care of yourself and don't hesitate to seek support from your loved ones."
+
+  utter_therapy_resources:
+    - text: "I understand that you're looking for the nearest mental health facility. I'd like to provide you with some resources that might be helpful: \n\n
+      📖 [Finding the Right Therapist](https://adaa.org/sites/default/files/Finding%20the%20Right%20Therapist.pdf): You did well taking the first step to decide to see a therapist! Here are questions you may ask a therapist before committing to them.\n\n
+      📖 [Therapy options guide](https://adaa.org/sites/default/files/downloads/Therapy%20options%20guide_0.pdf): There are many types of therapy available out there. Find the right choice for you through this guide. This resources is from the Anxiety and Depression Association of America. The crisis lines in this file are not applicable to the Philippines. If you are in crisis, please call 0917-899-8727, (02) 1553, or (02) 7-989-8727.\n\n
+      Remember, it's essential to seek professional help when needed."
+
+  utter_iamabot:
+  - text: "I am Beshy, the Bot for Emotional Support and Happy You. You're chatting with an AI assistant designed to have conversations with you. Think of me as your friendly mental health buddy. My goal is to provide support, empathy, and a listening ear. Just a heads up, I'm here to offer guidance, but I can't diagnose any conditions. It's always a good idea to consult a licensed professional for personalized advice. Your privacy is important to us, and we follow data privacy laws in the Philippines."
+
+slots:
+  predicted_class:
+    type: text
+    mappings:
+      - type: custom
+
+  probability:
+    type: float
+    mappings:
+      - type: custom
+
+  location:
+    type: text
+    mappings:
+      - type: custom
+
+actions:
+  - action_predict_mental_health_risk
+  - action_utter_similar_thoughts_probability
+  - action_nearest_mental_health_facility
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

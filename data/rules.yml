@@ -1,0 +1,19 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Redirect to the emergency help anytime the user says high risk or trigger words
+  steps:
+  - intent: mood_high_risk
+  - action: utter_high_risk_contact
+  - action: utter_high_risk_resources

@@ -1,0 +1,71 @@
+# version: "3.1"
+
+# stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_emotional_support_general_mood
+
+- story: user expresses their emotional state and wants to know the status and resources
+  steps:
+  - intent: mood_general 
+  - action: action_predict_mental_health_risk
+  - action: utter_similar_thoughts_status
+  - intent: affirm
+  - action: action_utter_similar_thoughts_probability
+
+- story: user expresses their emotional state and does not want to know the status
+  steps:
+  - intent: mood_general
+  - action: action_predict_mental_health_risk
+  - action: utter_similar_thoughts_status
+  - intent: deny
+  - action: utter_emotional_support_general_mood
+
+- story: user requests for nearest mental health facility
+  steps:
+    - intent: ask_facility
+    - action: utter_location_details
+    - intent: inform_location
+    - action: action_nearest_mental_health_facility
+    - action: utter_therapy_resources

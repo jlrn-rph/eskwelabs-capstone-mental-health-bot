@@ -1,0 +1,4 @@
+.rasa
+actions/__pycache__
+models
+models-binary/archived

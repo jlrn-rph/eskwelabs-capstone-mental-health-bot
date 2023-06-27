@@ -1,0 +1,210 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes, please tell me
+    - i want to know
+    - yes, it was helpful
+    - yeah, it made a difference
+    - yeah
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No, I'm good for now
+    - That's all
+
+- intent: mood_general
+  examples: |
+    - Not wanting to do anything. Not wanting to be anything. Not wanting to be at all. I don't necessarily want to die. I just want to have never existed.
+    - This is me. I don't want to die and hurt my siblings. I feel like it would be easier for everyone if I just was never born. 
+    - Complete lack of motivation to do anything. Any ideas or invitations from other people either seem uninteresting or daunting in how much effort they take. Your mind and body basically just shut down and you watch the day pass at a snails pace.
+    - I am nothing, and nothing matters.
+    - Regardless of how happy you should be, you feel sad.
+    - I just feel pointless, like i'm a filler in the background of someone elses life.
+    - You do the bare minimum for everything.
+    - I call it the low. It's like dragging yourself through calve deep mud with no energy; you can move forward, but the effort just seems more and more taxing until you just want to sit down and stop walking. Then, you wallow.
+    - Everything that interests you or you enjoy doing, seems boring & you don't want to do it anymore.
+    - Like you're in a black hole of despair, you actually believe it won't ever get better, and everything, even simple day to day tasks, are overwhelming.
+    - It's like you're in a constant fog state. You can hear fine, but you have trouble listening. You know what to say (or you don't), but you can't say it. It's not quite fear that's holding you back, but your body and everything in it is just frozen.
+    - Your brain creates problems that don't exist, with anxiety we tend to assume the worst will happen. This makes us very scared to do normal things
+    - It's like in a video game where there's ominous music playing because you are about to run into a boss or something bad is happening. Except there is no boss. There is no threat. Yet the ominous music keeps playing.
+    - For me I just can't stop thinking, thinking of all the possible conversations I could have and the responses, or all the conversations I have had that I could have given a better response. Moments replaying over and over in my head of anxious situations. Wondering if the path I chose was wrong, how to make it better, can I make it better.
+    - Only way I've ever thought to describe it is like an intense fear. Your body is overwhelmed with fear and you can't move or communicate easily. It makes me just want to curl up in a blanket burrito until it passes.
+    - Echoing pieces of very normal conversations in my head and dwelling upon them for days
+    - Intense propensity to flight in the ol' Fight or Flight situation.
+    - Constantly preparing answers in my head to questions that no one has asked.
+    - It's not rational, you can't reason with it, it's not controllable. You just sit and worry about stuff you can't control, with no relief in sight.
+    - More than anything, it's exhausting. I never realized how much it was draining me until I got on meds.
+    - If I yeeted my lego Millennium Falcon off of an overpass would it jump to light speed?
+    - Imagine myself in imposible situations, like exploring the world and founding a lost city like the Shambala, and when I have to take a long walk to somewhere, I just narrate my own life while walking because I'm bored, thing that does not happen on the car because I had my mind full on the road.
+    - So if the past was once the present and right now will be the past, and right now was once the future, and so was the past, the past present and future are all the same and we just label them to make up for the fact we'll never wrap our heads around the concept of time
+    - how much of myself can I eat before dying?
+    - eleven and twelve should be called oneteen and twoteen... and thats all i got to say
+    - Can you make a bullet that fires another bullet, making the second gullet go faster?
+    - Are M&Ms cannibals? Their body is an M&M and yet on packaging they are seen holding an M&M torn in half, even eating it. So, basically they tore each other apart and eat the dead?
+    - What if our legs were the same length as our arms.
+    - what if an extra terrestrial species are tracking Voyager 1 and 2?
+    - I may never be as happy as a dog about to go out for a walk the fourth time in a day on the same walk they've been on for years.
+    - I like dogs
+    - I went to the hospital to have a regular check up
+    - I like to cut myself just to feel something
+  
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: mood_high_risk
+  examples: |
+    - suicide
+    - suicidal
+    - disappear
+    - kill
+    - cut
+    - gun
+    - exist
+    - demise
+    - despair
+    - hopeless
+    - hurt
+    - die
+    - dying
+    - dead
+    - rope
+    - trapped
+    - will 
+    - hatred
+    - isolate
+    - distance
+    - withdraw
+    - disconnect
+    - guilt
+    - shame
+    - burden
+    - lethal
+    - violence
+    - worthless
+    - reckless
+    - unbearable
+    - pain
+    - numb 
+    - emotionless
+    - chronic
+    - calm
+    - jump
+    - harm
+    - need help urgently
+    - without me
+    - not wake up
+    - no reason to live
+    - no purpose
+    - end life
+    - stockpiling tablets
+    - hadn't been born
+    - see you again
+    - better off dead
+    - never get better
+    - give personal items 
+    - wrap up loose ends
+    - no future
+    - intrusive thoughts
+
+- intent: user_needs_support
+  examples: |
+    - i could use some help
+    - can you provide support?
+
+- intent: ask_facility
+  examples: |
+    - i want to get some information about the nearest mental health facility to my location
+    - do you know some hospitals for mental health near me?
+    - nearest mental health hospital
+    - give me some information for a mental health facility near me
+    
+- intent: inform_location
+  examples: |
+    - My location is [Manila](location)
+    - I am in [Cebu City](location)
+    - [Quezon City](location)
+    - I'm from [Davao](location)
+    - I'm located at [Mandaluyong](location)
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
